@@ -1,0 +1,2 @@
+/usr/bin/ar qc libEnemyS.a CMakeFiles/EnemyS.dir/Enemy/Enemy.cpp.o
+/usr/bin/ranlib libEnemyS.a
