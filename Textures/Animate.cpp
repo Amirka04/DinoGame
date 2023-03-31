@@ -45,8 +45,7 @@ Animate::Animate(char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAnimate){
         cout << path + namefile << endl;
         AnimateIndex[i] = TexturesInit( (path + namefile).c_str() );
 
-        cout << "Index Texture: " << AnimateIndex[i] << endl;
-    }
+        }
 
 }
 
@@ -59,6 +58,6 @@ void Animate::RunAnimation(){
         NowIndex = 0;
     }
     ( (int)NowIndex < SizeTextureArray) ? NowIndex += SpeedAnimate : NowIndex = 0;
-    cout << "Now index: " << (int)NowIndex << " - " << "Texture array: " << AnimateIndex[(int)NowIndex] << endl;
+    // cout << "Now index: " << (int)NowIndex << " - " << "Texture array: " << AnimateIndex[(int)NowIndex] << endl;
 
 }

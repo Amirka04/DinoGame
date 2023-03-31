@@ -34,6 +34,7 @@ uint Textures::TexturesInit(const char* image){
     return textureID;
 }
 
+
 void Textures::Init(){
     glEnable(GL_TEXTURE_2D);
     glEnable(GL_ALPHA_TEST);
