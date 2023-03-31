@@ -182,6 +182,19 @@ Animate/fast:
 .PHONY : Animate/fast
 
 #=============================================================================
+# Target rules for targets named Platform
+
+# Build rule for target.
+Platform: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Platform
+.PHONY : Platform
+
+# fast build rule for target.
+Platform/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Platform.dir/build.make CMakeFiles/Platform.dir/build
+.PHONY : Platform/fast
+
+#=============================================================================
 # Target rules for targets named MyGame
 
 # Build rule for target.
@@ -241,6 +254,30 @@ Enemy/Enemy.s: Enemy/Enemy.cpp.s
 Enemy/Enemy.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EnemyS.dir/build.make CMakeFiles/EnemyS.dir/Enemy/Enemy.cpp.s
 .PHONY : Enemy/Enemy.cpp.s
+
+Platform/Platform.o: Platform/Platform.cpp.o
+.PHONY : Platform/Platform.o
+
+# target to build an object file
+Platform/Platform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Platform.dir/build.make CMakeFiles/Platform.dir/Platform/Platform.cpp.o
+.PHONY : Platform/Platform.cpp.o
+
+Platform/Platform.i: Platform/Platform.cpp.i
+.PHONY : Platform/Platform.i
+
+# target to preprocess a source file
+Platform/Platform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Platform.dir/build.make CMakeFiles/Platform.dir/Platform/Platform.cpp.i
+.PHONY : Platform/Platform.cpp.i
+
+Platform/Platform.s: Platform/Platform.cpp.s
+.PHONY : Platform/Platform.s
+
+# target to generate assembly for a file
+Platform/Platform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Platform.dir/build.make CMakeFiles/Platform.dir/Platform/Platform.cpp.s
+.PHONY : Platform/Platform.cpp.s
 
 Textures/Animate.o: Textures/Animate.cpp.o
 .PHONY : Textures/Animate.o
@@ -350,6 +387,7 @@ help:
 	@echo "... DinoLib"
 	@echo "... EnemyS"
 	@echo "... MyGame"
+	@echo "... Platform"
 	@echo "... VectorLib"
 	@echo "... texture"
 	@echo "... Dino/Dino.o"
@@ -358,6 +396,9 @@ help:
 	@echo "... Enemy/Enemy.o"
 	@echo "... Enemy/Enemy.i"
 	@echo "... Enemy/Enemy.s"
+	@echo "... Platform/Platform.o"
+	@echo "... Platform/Platform.i"
+	@echo "... Platform/Platform.s"
 	@echo "... Textures/Animate.o"
 	@echo "... Textures/Animate.i"
 	@echo "... Textures/Animate.s"

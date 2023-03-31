@@ -1266,6 +1266,18 @@
 			"value" : "/home/amirka/\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b/C++/DinoGame"
 		},
 		{
+			"name" : "Platform_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;texture;"
+		},
+		{
 			"name" : "Project_BINARY_DIR",
 			"properties" : 
 			[

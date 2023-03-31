@@ -244,6 +244,9 @@ MyGame_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 MyGame_SOURCE_DIR:STATIC=/home/amirka/Рабочий стол/C++/DinoGame
 
+//Dependencies for the target
+Platform_LIB_DEPENDS:STATIC=general;texture;
+
 //Value Computed by CMake
 Project_BINARY_DIR:STATIC=/home/amirka/Рабочий стол/C++/DinoGame/build
 

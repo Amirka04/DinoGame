@@ -26,6 +26,11 @@
 },
 {
   "directory": "/home/amirka/Рабочий стол/C++/DinoGame/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/Platform.dir/Platform/Platform.cpp.o -c \"/home/amirka/Рабочий стол/C++/DinoGame/Platform/Platform.cpp\"",
+  "file": "/home/amirka/Рабочий стол/C++/DinoGame/Platform/Platform.cpp"
+},
+{
+  "directory": "/home/amirka/Рабочий стол/C++/DinoGame/build",
   "command": "/usr/bin/g++   -g -o CMakeFiles/MyGame.dir/main.cpp.o -c \"/home/amirka/Рабочий стол/C++/DinoGame/main.cpp\"",
   "file": "/home/amirka/Рабочий стол/C++/DinoGame/main.cpp"
 }

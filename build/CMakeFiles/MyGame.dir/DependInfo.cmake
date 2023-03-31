@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/DinoLib.dir/DependInfo.cmake"
   "/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/EnemyS.dir/DependInfo.cmake"
+  "/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/Platform.dir/DependInfo.cmake"
   "/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/Animate.dir/DependInfo.cmake"
   "/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/VectorLib.dir/DependInfo.cmake"
   "/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/texture.dir/DependInfo.cmake"

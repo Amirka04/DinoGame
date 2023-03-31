@@ -53,5 +53,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/texture.dir/DependInfo.cmake"
   "CMakeFiles/EnemyS.dir/DependInfo.cmake"
   "CMakeFiles/Animate.dir/DependInfo.cmake"
+  "CMakeFiles/Platform.dir/DependInfo.cmake"
   "CMakeFiles/MyGame.dir/DependInfo.cmake"
   )

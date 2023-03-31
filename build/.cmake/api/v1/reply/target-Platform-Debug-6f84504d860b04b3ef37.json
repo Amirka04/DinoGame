@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libEnemyS.a"
+			"path" : "libPlatform.a"
 		}
 	],
 	"backtrace" : 1,
@@ -26,13 +26,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 20,
+				"line" : 24,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 31,
+				"line" : 33,
 				"parent" : 0
 			}
 		]
@@ -57,16 +57,12 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "VectorLib::@6890427a1f51a3e7e1df"
-		},
-		{
-			"backtrace" : 2,
 			"id" : "texture::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "EnemyS::@6890427a1f51a3e7e1df",
-	"name" : "EnemyS",
-	"nameOnDisk" : "libEnemyS.a",
+	"id" : "Platform::@6890427a1f51a3e7e1df",
+	"name" : "Platform",
+	"nameOnDisk" : "libPlatform.a",
 	"paths" : 
 	{
 		"build" : ".",
@@ -94,12 +90,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Enemy/Enemy.cpp",
+			"path" : "Platform/Platform.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Enemy/Enemy.h",
+			"path" : "Platform/Platform.hpp",
 			"sourceGroupIndex" : 1
 		}
 	],

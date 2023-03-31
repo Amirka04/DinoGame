@@ -25,19 +25,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 26,
+				"line" : 27,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 33,
+				"line" : 36,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 34,
+				"line" : 37,
 				"parent" : 0
 			}
 		]
@@ -79,6 +79,10 @@
 		{
 			"backtrace" : 2,
 			"id" : "Animate::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "Platform::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "MyGame::@6890427a1f51a3e7e1df",
@@ -102,6 +106,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "libEnemyS.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "libPlatform.a",
 				"role" : "libraries"
 			},
 			{

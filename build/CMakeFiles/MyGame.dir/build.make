@@ -94,6 +94,7 @@ MyGame: CMakeFiles/MyGame.dir/main.cpp.o
 MyGame: CMakeFiles/MyGame.dir/build.make
 MyGame: libDinoLib.a
 MyGame: libEnemyS.a
+MyGame: libPlatform.a
 MyGame: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1
 MyGame: /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1
 MyGame: /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
