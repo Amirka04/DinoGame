@@ -35,6 +35,10 @@ void Vector2d::operator-=(Vector2d vec2){
     this->y -= vec2.y;
 }
 
+void Vector2d::operator*=(Vector2d vec2){
+    this->x *= vec2.x;
+    this->y *= vec2.y;
+}
 
 
 

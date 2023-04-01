@@ -9,14 +9,14 @@ Dino::Dino(){
     printf("Animate initializate!\n");
 }
 
+
 Dino::Dino(Animate AnimateDino, Vector2d coord, Vector2d size):Animate(AnimateDino){
     this->coord = coord;
     this->size = size;
 
     for(int i = 0; i < arr_size; i++){
         // устанавливаем размер
-        VertexArray[i].x *= this->size.x;
-        VertexArray[i].y *= this->size.y;
+        VertexArray[i] *= this->size;
         // подвинем точку в нужное место
         VertexArray[i] += this->coord;
     }
@@ -24,7 +24,7 @@ Dino::Dino(Animate AnimateDino, Vector2d coord, Vector2d size):Animate(AnimateDi
 
 
 void Dino::draw(){
-    
+
     RunAnimation();
     glBindTexture(GL_TEXTURE_2D, AnimateIndex[ (int)NowIndex ]);
 

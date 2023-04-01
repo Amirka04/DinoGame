@@ -242,6 +242,9 @@ CMakeFiles/MyGame.dir/main.cpp.o: \
  /usr/include/GL/glext.h /usr/include/KHR/khrplatform.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
+ /home/amirka/Рабочий\ стол/C++/DinoGame/Platform/Platform.hpp \
+ /home/amirka/Рабочий\ стол/C++/DinoGame/Platform/../Vectors/Vector2D.h \
+ /home/amirka/Рабочий\ стол/C++/DinoGame/Platform/../Textures/Textures.h \
  /home/amirka/Рабочий\ стол/C++/DinoGame/Dino/Dino.h \
  /home/amirka/Рабочий\ стол/C++/DinoGame/Dino/../Textures/Animate.hpp \
  /home/amirka/Рабочий\ стол/C++/DinoGame/Dino/../Textures/Textures.h \

@@ -54,10 +54,9 @@ Animate::Animate(char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAnimate){
 void Animate::RunAnimation(){
     Init();
 
-    if(NowIndex == 4){
+    ( (int)NowIndex < SizeTextureArray) ? NowIndex += SpeedAnimate : NowIndex = 0;
+    if(NowIndex >= SizeTextureArray){
         NowIndex = 0;
     }
-    ( (int)NowIndex < SizeTextureArray) ? NowIndex += SpeedAnimate : NowIndex = 0;
     // cout << "Now index: " << (int)NowIndex << " - " << "Texture array: " << AnimateIndex[(int)NowIndex] << endl;
-
 }
