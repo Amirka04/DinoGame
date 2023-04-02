@@ -34,7 +34,7 @@ Platform::Platform(const char* namefile, Vector2d coord, Vector2d size, float sp
 
 // рисование платформы
 void Platform::draw(){
-//    Init();
+    Init();
     // включим активную текстуру
     glBindTexture(GL_TEXTURE_2D, textureID);
 
@@ -57,4 +57,15 @@ void Platform::draw(){
 
     // отключим текстуру
     glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+platformInfo::platformInfo(){    
+}
+
+
+platformInfo::platformInfo(const char* name, Vector2d coord, Vector2d size, float speed){
+    this->name = name;
+    this->coord = coord;
+    this->size = size;
+    this->speed = speed;
 }
