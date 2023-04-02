@@ -1,2 +1,0 @@
-/usr/bin/ar qc libPlatform.a CMakeFiles/Platform.dir/Platform/Platform.cpp.o
-/usr/bin/ranlib libPlatform.a

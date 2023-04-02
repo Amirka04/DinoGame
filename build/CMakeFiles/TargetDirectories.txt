@@ -1,9 +1,0 @@
-/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/DinoLib.dir
-/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/VectorLib.dir
-/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/texture.dir
-/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/EnemyS.dir
-/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/Animate.dir
-/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/Platform.dir
-/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/MyGame.dir
-/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/edit_cache.dir
-/home/amirka/Рабочий стол/C++/DinoGame/build/CMakeFiles/rebuild_cache.dir

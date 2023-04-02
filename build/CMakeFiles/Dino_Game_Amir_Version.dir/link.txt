@@ -1,1 +1,0 @@
-/usr/bin/g++ -g CMakeFiles/Dino_Game_Amir_Version.dir/main.cpp.o -o Dino_Game_Amir_Version  /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1 -lGL libDinoClass.a libTextures.a libVector2D.a 

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libDinoClass.a CMakeFiles/DinoClass.dir/Dino/Dino.cpp.o
-/usr/bin/ranlib libDinoClass.a

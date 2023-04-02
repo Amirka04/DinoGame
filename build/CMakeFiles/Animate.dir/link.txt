@@ -1,2 +1,0 @@
-/usr/bin/ar qc libAnimate.a CMakeFiles/Animate.dir/Textures/Animate.cpp.o
-/usr/bin/ranlib libAnimate.a

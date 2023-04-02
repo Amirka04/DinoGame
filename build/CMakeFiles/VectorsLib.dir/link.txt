@@ -1,2 +1,0 @@
-/usr/bin/ar qc libVectorsLib.a CMakeFiles/VectorsLib.dir/Dino/Dino.cpp.o
-/usr/bin/ranlib libVectorsLib.a
