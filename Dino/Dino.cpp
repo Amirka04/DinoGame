@@ -6,11 +6,14 @@
 
 
 Dino::Dino(){
-    printf("Animate initializate!\n");
+    printf("Динозавр инициализирован\n");
 }
 
 
 Dino::Dino(Animate AnimateDino, Vector2d coord, Vector2d size):Animate(AnimateDino){
+    printf("Динозавр инициализирован\n");
+    
+
     this->coord = coord;
     this->size = size;
 

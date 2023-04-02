@@ -10,14 +10,14 @@ using namespace std;
 
 
 Animate::Animate(){
-    cout << "Texture load: " << endl;
+    cout << "Загрузка текстур: " << endl;
 }
 
 Animate::~Animate(){
 }
 
 Animate::Animate(char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAnimate){
-    cout << "Texture load: " << endl;
+    cout << "Загрузка текстур: " << endl;
 
     // потребуется для открытия файла
     string path = folder;
@@ -37,7 +37,7 @@ Animate::Animate(char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAnimate){
         }
     }
 
-    cout << "Size image: " << SizeTextureArray << endl;
+    cout << "Количество изображений: " << SizeTextureArray << endl;
 
     AnimateIndex = new uint[SizeTextureArray];
     for(int i = 0; i < SizeTextureArray; i++){
@@ -46,7 +46,6 @@ Animate::Animate(char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAnimate){
         AnimateIndex[i] = TexturesInit( (path + namefile).c_str() );
 
         }
-
 }
 
 
