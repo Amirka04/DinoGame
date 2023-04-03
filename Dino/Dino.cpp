@@ -13,8 +13,9 @@ Dino::Dino(){
 Dino::Dino(Animate AnimateDino, Vector2d coord, Vector2d size):Animate(AnimateDino){
     printf("Динозавр инициализирован\n");
     
-
     this->coord = coord;
+    y0 = this->coord.y;
+
     this->size = size;
 
     for(int i = 0; i < arr_size; i++){
@@ -23,6 +24,10 @@ Dino::Dino(Animate AnimateDino, Vector2d coord, Vector2d size):Animate(AnimateDi
         // подвинем точку в нужное место
         VertexArray[i] += this->coord;
     }
+}
+
+Dino::~Dino(){
+    delete [] VertexArray;
 }
 
 
@@ -44,4 +49,23 @@ void Dino::draw(){
     glDisableClientState(GL_TEXTURE_COORD_ARRAY);
 
     glBindTexture(GL_TEXTURE_2D, 0);
+}
+
+void Dino::Jump(){
+    if(Keyboard::isKeyPressed(Keyboard::Key::W) && !isJump)
+        isJump = 1;
+
+    if(isJump && CntJump != reCntJump){
+        for(int i = 0; i < arr_size; i++)
+            VertexArray[i] += Vector2d(0, PowerJump * CntJump);
+        coord += Vector2d(0, PowerJump * CntJump);
+
+        CntJump--;
+    }
+    else{
+        isJump = 0;
+        CntJump = -reCntJump;
+    }
+
+
 }

@@ -11,8 +11,7 @@ using string = std::string;
 class Animate: protected Textures{
     public:
         Animate();
-        Animate(char*, float);
-        ~Animate();
+        Animate(const char*, float);
         
 
         void RunAnimation();

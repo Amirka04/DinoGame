@@ -11,6 +11,7 @@ class Textures{
     public:
         Textures();
         Textures(const char*);
+        // ~Textures();
 
         void Init();
         uint TexturesInit(const char*);

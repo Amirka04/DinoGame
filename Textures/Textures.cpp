@@ -14,6 +14,11 @@ Textures::Textures(const char* image){
     printf("Texture Initializate\n   texture name:%s\n   texture id:%d", image, textureID);
 }
 
+// подчистим за собой память
+// Textures::~Textures(){
+//     delete [] TextureUV;
+// }
+
 uint Textures::TexturesInit(const char* image){
     int width, height, cnt;
 

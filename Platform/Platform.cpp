@@ -38,6 +38,7 @@ Platform::Platform(const char* namefile, Vector2d coord, Vector2d size, float sp
 
 // рисование платформы
 void Platform::draw(){
+    // Разрешил использовать текстуры
     Init();
 
     RunPlatform();
@@ -120,6 +121,11 @@ void Platform::SetSpeed(float speed){
 
 // Заставим платформу двигаться и телепортироваться при выхода из границы
 void Platform::RunPlatform(){
+    
+    if(SpeedPlatform < MaxSpeed){
+        SpeedPlatform += a/1000;
+    }
+
     for(int i = 0; i < size_arr; i++)
         vertex[i] -= Vector2d(SpeedPlatform, 0);    
     coord -= Vector2d(SpeedPlatform, 0);
@@ -130,3 +136,10 @@ void Platform::RunPlatform(){
         coord+=Vector2d(2.8, 0);
     }
 }
+
+// установка максмальной скорости
+void Platform::SetMaxSpeed(float Speed){
+    MaxSpeed = Speed;
+}
+
+

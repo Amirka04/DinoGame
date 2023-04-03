@@ -13,16 +13,15 @@ Animate::Animate(){
     cout << "Загрузка текстур: " << endl;
 }
 
-Animate::~Animate(){
-}
 
-Animate::Animate(char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAnimate){
+Animate::Animate(const char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAnimate){
     cout << "Загрузка текстур: " << endl;
 
     // потребуется для открытия файла
     string path = folder;
+    string name_init = "animate.dat";
 
-    ifstream AnimateFiles(path + "animate.dat");
+    ifstream AnimateFiles(path + name_init);
     if(!AnimateFiles.is_open()){
         cout << "Файл не получилось открыть, проверь, есть ли файл в каталоге или проверь правильность пути" << endl;
     }
@@ -44,8 +43,7 @@ Animate::Animate(char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAnimate){
         string namefile = a[i];
         cout << path + namefile << endl;
         AnimateIndex[i] = TexturesInit( (path + namefile).c_str() );
-
-        }
+    }
 }
 
 

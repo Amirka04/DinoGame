@@ -22,8 +22,13 @@ class Platform: protected Textures{
         void SetCoordinate(Vector2d);
         void SetSize(Vector2d);
         void SetSpeed(float);
+        void SetMaxSpeed(float);
 
     protected:
+        float a = 0.000001;
+        float MaxSpeed;
+
+
         Vector2d coord = {0,0};
         Vector2d size = {0,0};
 
