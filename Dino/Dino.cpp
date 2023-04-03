@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 
+using namespace sf;
 
 Dino::Dino(){
     printf("Динозавр инициализирован\n");
@@ -14,7 +15,6 @@ Dino::Dino(Animate AnimateDino, Vector2d coord, Vector2d size):Animate(AnimateDi
     printf("Динозавр инициализирован\n");
     
     this->coord = coord;
-    y0 = this->coord.y;
 
     this->size = size;
 
@@ -31,11 +31,18 @@ Dino::~Dino(){
 }
 
 
+void Dino::add_Texture(){
+
+}
+
+
 void Dino::draw(){
 
     RunAnimation();
+
     glBindTexture(GL_TEXTURE_2D, AnimateIndex[ (int)NowIndex ]);
 
+    Dino::Jump();
     //рисование
     glEnableClientState(GL_VERTEX_ARRAY);
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
@@ -51,15 +58,15 @@ void Dino::draw(){
     glBindTexture(GL_TEXTURE_2D, 0);
 }
 
+
 void Dino::Jump(){
-    if(Keyboard::isKeyPressed(Keyboard::Key::W) && !isJump)
-        isJump = 1;
 
-    if(isJump && CntJump != reCntJump){
-        for(int i = 0; i < arr_size; i++)
+    if(isJump && CntJump > reCntJump - 1){
+        for(int i = 0; i < arr_size; i++){
             VertexArray[i] += Vector2d(0, PowerJump * CntJump);
+        }
         coord += Vector2d(0, PowerJump * CntJump);
-
+        
         CntJump--;
     }
     else{
@@ -67,5 +74,7 @@ void Dino::Jump(){
         CntJump = -reCntJump;
     }
 
+    if(Keyboard::isKeyPressed(Keyboard::Key::W) && !isJump)
+        isJump = 1;
 
 }

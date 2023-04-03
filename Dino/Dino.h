@@ -13,16 +13,16 @@ class Dino: protected Animate{
             int arr_size = 4;
             Vector2d *VertexArray = new Vector2d[arr_size]{ {1,1}, {-1,1}, {-1,-1}, {1,-1}};
 
-            float y0;
-            int isJump;
-            int CntJump = 20, reCntJump = -CntJump;
-            int PowerJump = 0.0002;
+            int isJump = 0;
+            int CntJump = 150, reCntJump = -CntJump;
+            float PowerJump = 0.00007;
 
         public:
             Dino();
             Dino(Animate, Vector2d, Vector2d);
             ~Dino();
 
+            void add_Texture();
             void Jump();
             void draw();
 

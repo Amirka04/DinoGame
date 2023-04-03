@@ -20,7 +20,7 @@ int main(){
 
     RenderWindow window(VideoMode(WW, WH), "Dino");
     
-    Dino *dino = new Dino(Animate("../texture/DinoAnimate/", 0.003), Vector2d(-1, -0.5), Vector2d(0.25 * dW, 0.25));
+    Dino *dino = new Dino(Animate("../texture/DinoAnimate/", 0.003), Vector2d(-0.75, -0.5), Vector2d(0.25 * dW, 0.25));
 
 
     // пусть пока что будут 6 платформ
