@@ -13,6 +13,7 @@ class Animate: protected Textures{
         Animate();
         Animate(const char*, float);
         
+        static void GlobalInit();
 
         void RunAnimation();
 
@@ -22,7 +23,10 @@ class Animate: protected Textures{
 
         int SizeTextureArray;
         uint *AnimateIndex;
-        
+
+    private:
+        static float MaxSpeedAnimate;
+
 };
 
 #endif

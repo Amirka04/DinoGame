@@ -7,12 +7,10 @@
 using namespace std;
 
 
-
-
+// конструктор без параметров
 Animate::Animate(){
     cout << "Загрузка текстур: " << endl;
 }
-
 
 Animate::Animate(const char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAnimate){
     cout << "Загрузка текстур: " << endl;
@@ -20,13 +18,14 @@ Animate::Animate(const char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAni
     // потребуется для открытия файла
     string path = folder;
     string name_init = "animate.dat";
-
+    
+    // Открываю файл содержащий информацию для анимации
     ifstream AnimateFiles(path + name_init);
     if(!AnimateFiles.is_open()){
-        cout << "Файл не получилось открыть, проверь, есть ли файл в каталоге или проверь правильность пути" << endl;
+        cout << "Файл не получилось открыть, проверь, есть ли файл в каталоге или проверь правильность пути, файл в директории должен называться \"animate.dat\"" << endl;
     }
     
-
+    // Массив для хранения названий файлов для анимации
     char a[20][100];
     SizeTextureArray = 0;
     for(int i = 0; i < 20; i++){
@@ -38,6 +37,7 @@ Animate::Animate(const char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAni
 
     cout << "Количество изображений: " << SizeTextureArray << endl;
 
+    // выведем все изображения и загрузим каждую в видеокарту, где потом будем использовать индексы этих изображений
     AnimateIndex = new uint[SizeTextureArray];
     for(int i = 0; i < SizeTextureArray; i++){
         string namefile = a[i];
@@ -46,9 +46,9 @@ Animate::Animate(const char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAni
     }
 }
 
-
-
+// Запуск анимации
 void Animate::RunAnimation(){
+
     Init();
 
     ( (int)NowIndex < SizeTextureArray) ? NowIndex += SpeedAnimate : NowIndex = 0;
@@ -57,3 +57,7 @@ void Animate::RunAnimation(){
     }
     // cout << "Now index: " << (int)NowIndex << " - " << "Texture array: " << AnimateIndex[(int)NowIndex] << endl;
 }
+
+
+
+

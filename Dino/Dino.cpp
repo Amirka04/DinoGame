@@ -6,18 +6,17 @@
 
 using namespace sf;
 
+// Конструктор без параметров
 Dino::Dino(){
     printf("Динозавр инициализирован\n");
 }
 
-
+// Конструктор с параметрами: Класс анимации, Вектор(расположения), Вектор(Размера)
 Dino::Dino(Animate AnimateDino, Vector2d coord, Vector2d size):Animate(AnimateDino){
     printf("Динозавр инициализирован\n");
     
     this->coord = coord;
-
     this->size = size;
-
     for(int i = 0; i < arr_size; i++){
         // устанавливаем размер
         VertexArray[i] *= this->size;
@@ -26,16 +25,31 @@ Dino::Dino(Animate AnimateDino, Vector2d coord, Vector2d size):Animate(AnimateDi
     }
 }
 
+// Конструктор с теми же параметрами, но уже с изменением окна
+Dino::Dino(Animate AnimateDino, Vector2d coord, Vector2d size, float dWind):Animate(AnimateDino){
+    printf("Динозавр инициализирован\n");
+    
+    this->coord = coord;
+    
+    this->size = size;
+    this->size.x *= dWind;
+
+    for(int i = 0; i < arr_size; i++){
+        // устанавливаем размер
+        VertexArray[i] *= this->size;
+        // подвинем точку в нужное место
+        VertexArray[i] += this->coord;
+    }
+}    
+
+
+// Деструктор для удаления диномического массива
 Dino::~Dino(){
     delete [] VertexArray;
+    delete [] AnimateIndex;
 }
 
-
-void Dino::add_Texture(){
-
-}
-
-
+//рисование и проигрывание анимации Динозаврика
 void Dino::draw(){
 
     RunAnimation();
