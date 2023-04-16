@@ -1,8 +1,8 @@
 #include "Dino.h"
-#include <SFML/Graphics.hpp>
-#include <GL/gl.h>
+#include "SFML/Graphics.hpp"
+#include "GL/gl.h"
 
-#include <stdio.h>
+#include "stdio.h"
 
 using namespace sf;
 

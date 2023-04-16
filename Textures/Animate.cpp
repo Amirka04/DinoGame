@@ -1,6 +1,5 @@
 #include "Animate.hpp"
 
-
 #include <iostream>
 #include <fstream>
 
@@ -48,16 +47,42 @@ Animate::Animate(const char* folder, float uSpeedAnimate):SpeedAnimate(uSpeedAni
 
 // Запуск анимации
 void Animate::RunAnimation(){
-
     Init();
 
-    ( (int)NowIndex < SizeTextureArray) ? NowIndex += SpeedAnimate : NowIndex = 0;
-    if(NowIndex >= SizeTextureArray){
-        NowIndex = 0;
+//  Будем гонять индекс с начала до конца, что и позволит достичь нам анимации, индекс будет типа float,
+    if( NowIndex < SizeTextureArray - 0.01)
+        NowIndex += SpeedAnimate;
+    else
+        NowIndex = 0.1;
+
+    // Тут мы меняем скорость воспроизведения анимации
+    if(SpeedAnimate < Animate::MaxSpeedAnimate){
+        if(!isLocallInit)
+            SpeedAnimate += Animate::A;
+        else
+            SpeedAnimate += LocalA;
     }
-    // cout << "Now index: " << (int)NowIndex << " - " << "Texture array: " << AnimateIndex[(int)NowIndex] << endl;
 }
 
+
+// инициализация глобальных членов класса
+// глобальных в том смысле, что они будут действовать для всей анимации в игре
+float Animate::MaxSpeedAnimate = 0;
+float Animate::A = 0;
+void Animate::SetGlobalInit(float u_MaxSpeedAnimate, float u_A){
+    MaxSpeedAnimate = u_MaxSpeedAnimate;
+    A = u_A;
+}
+
+
+// Установка начальных настроек для локальной анимации, то есть анимации скорость которой будет не зависеть от скорости других
+void Animate::LocalInit(float LocalMaxSpeedAnimate, float LocalA){
+    // даём знать, что мы инициализировали скорость и ускорение анимации локально
+    isLocallInit = 1;
+
+    this->LocalMaxSpeedAnimate = LocalMaxSpeedAnimate;
+    this->LocalA = LocalA;
+}
 
 
 

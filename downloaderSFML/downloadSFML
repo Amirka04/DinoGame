@@ -1,0 +1,6 @@
+
+sudo apt-get install libsfml-dev - Ubuntu/Kubuntu
+sudo pacman -S sfml - Manjaro
+
+Для всех остальных дистрибутивов: <Установшик> libsfml-dev/sfml
+

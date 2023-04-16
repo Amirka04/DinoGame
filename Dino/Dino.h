@@ -4,7 +4,7 @@
 #include "../Textures/Animate.hpp"
 #include "../Vectors/Vector2D.h"
 
-class Dino : protected Animate
+class Dino : public Animate
 {
 private:
     int arr_size = 4;

@@ -1,9 +1,10 @@
 #ifndef ANIMATE_H
 #define ANIMATE_H
 
-#include <string>
+#include "string"
 
 #include "Textures.h"
+
 
 using string = std::string;
 
@@ -13,7 +14,8 @@ class Animate: protected Textures{
         Animate();
         Animate(const char*, float);
         
-        static void GlobalInit();
+        void LocalInit(float, float);
+        static void SetGlobalInit(float, float);
 
         void RunAnimation();
 
@@ -25,8 +27,13 @@ class Animate: protected Textures{
         uint *AnimateIndex;
 
     private:
-        static float MaxSpeedAnimate;
+        int isLocallInit = 0;
 
+        float LocalMaxSpeedAnimate;
+        float LocalA;
+
+        static float MaxSpeedAnimate;
+        static float A;
 };
 
 #endif
