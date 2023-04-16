@@ -16,9 +16,11 @@ cat downloaderSFML/downloadSFML
 echo -e "\n\033[94mустанавливаю...\033[0m\n"
 
 # Соберу проект
+cd build
 echo "Начинаю сборку"
 if cmake .. && make
 then
+	cd ..
 	cp -a texture/ build/
 	echo -e "\n\033[92mПапки с текстурами успешно перенесены в директорию с run-фалом\033[0m \n"
 fi
@@ -31,7 +33,6 @@ read -p "Y/N : " answer
 
 clear
 
-# exec 0<&6
 case $answer in
 y) echo -e "Приятной игры)\n" && cd build && ./MyGame;;
 n) echo "Ну ладно, потом как нибудь. ";;
