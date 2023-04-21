@@ -41,3 +41,12 @@ void Textures::Init(){
     glEnable(GL_ALPHA_TEST);
     glAlphaFunc(GL_GREATER, 0.99);
 }
+
+
+void Textures::Init(uint index){
+    glEnable(GL_TEXTURE_2D);
+    glEnable(GL_ALPHA_TEST);
+    glAlphaFunc(GL_GREATER, 0.99);
+
+    glBindTexture(GL_TEXTURE_2D, index);
+}

@@ -14,6 +14,7 @@ class Textures{
         // ~Textures();
 
         void Init();
+        void Init(uint);
         uint TexturesInit(const char*);
 };
 
