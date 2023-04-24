@@ -2,8 +2,10 @@
 #include "GL/gl.h"
 #include "iostream"
 
+#include "platforma/platforma.h"
 #include "BackGround/BackGround.hpp"
 #include "Dino/Dino.h"
+
 
 #define WH 640
 #define WW 1024
@@ -26,7 +28,16 @@ int main(){
 
 // Создам несколько фоновых элементов
     BackObject *Fon = new BackObject( Textures("../texture/background 0.png"), Vector2d(0,0), Vector2d(1,1) );
-    BackObject *Sun = new BackObject( Textures("../texture/sun.png"), Vector2d(-.3,.7), Vector2d(0.15*dW,0.15) );
+    BackObject *Sun = new BackObject( Textures("../texture/sun.png"), Vector2d(-.3,.7), Vector2d(0.1*dW,0.1) );
+
+    /*
+    Размер: (  ;  )
+    Координаты ( ; )
+     */
+
+//
+    platforma plato(Vector2d(0,0), Vector2d(0.1,0.05), 0);
+
 
 
 //  Весёлая надпись
@@ -40,6 +51,8 @@ int main(){
                 window.close();
                 // после закрытия окна подчистим за собой :)
                 delete dino;
+                delete Fon;
+                delete Sun;
             }
         }
 
@@ -52,9 +65,12 @@ int main(){
 //         фон, но не главный, будет рисоваться после главного фона
         Sun->show();
 
-        // рисую нашего персонажа
-        dino->draw();
+//         тест
+        plato.draw();
 
+
+        // рисую нашего персонажа его буду рисовать всегда последним, т.к. его должно быть видно
+        dino->draw();
 
 
         // отображаю всё что мы ранее рисовали
