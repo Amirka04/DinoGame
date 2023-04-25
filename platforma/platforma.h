@@ -7,19 +7,25 @@
 class platforma: protected Textures{
 public:
     platforma();
-    platforma(Vector2d, Vector2d, int);
+    platforma(Vector2d, Vector2d, uint);
+    platforma(platforma&);
     ~platforma();
 
-    void SetInfo(Vector2d, Vector2d, int);
+    platforma &operator=(platforma &);
+
+
+    void SetInfo(Vector2d, Vector2d, uint);
     void draw();
 protected:
-    int ID_Texture;
+    uint ID_Texture;
 
     Vector2d coordinate;
 
     const int Size = 4;
-    Vector2d *vec = new Vector2d[Size]{ {1,1}, {-1,1}, {-1,-1}, {1,-1} };
+    Vector2d *vec = new Vector2d[Size]{{1, 1}, {-1, 1}, {-1, -1}, {1, -1}};
+
 };
+
 
 
 #endif

@@ -18,8 +18,12 @@ set(Animates Textures/Animate.hpp Textures/Animate.cpp)
 set(Kaktuss Kaktus/Kaktus.cpp Kaktus/Kaktus.h)
 # Добавление файлов библиотеки фона
 set(BackGroundFiles BackGround/BackObject.cpp BackGround/BackObject.hpp)
+
+
 # Добавление файлов для платформы
 set(Platforma platforma/platforma.cpp platforma/platforma.h)
+set(PlatformaArray platforma/platform_array.cpp platforma/platform_array.h)
+
 
 
 # Добавление библиотек
@@ -36,9 +40,9 @@ add_library(Animate ${Animates})
 message("Успешное добавление библиотеки Animate")
 
 add_library(platforma ${Platforma})
-message("Успешное добавление библиотеки Platforma")
-
-
+add_library(platform_array ${PlatformaArray})
+add_library(MainPlatform platforma/platformObject.hpp)
+message("Успешное добавление библиотеки Platforma и platform_array")
 
 add_library(Kaktus ${Kaktuss})
 message("Успешное добавление библиотеки Kaktus")
@@ -55,11 +59,12 @@ add_executable(MyGame main.cpp)
 
 target_link_libraries(Animate PUBLIC texture)
 target_link_libraries(DinoLib PRIVATE VectorLib Animate texture)
-target_link_libraries(platforma PUBLIC texture VectorLib)
+target_link_libraries(platform_array PUBLIC platforma)
+target_link_libraries(MainPlatform PUBLIC texture VectorLib platforma platform_array)
 target_link_libraries(MainBackGround PRIVATE BackGround VectorLib)
 
 
-target_link_libraries(MyGame DinoLib Kaktus MainBackGround platforma)
+target_link_libraries(MyGame DinoLib Kaktus MainBackGround MainPlatform)
 target_link_libraries(MyGame sfml-graphics sfml-window sfml-system GL)
 
 
