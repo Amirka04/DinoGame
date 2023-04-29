@@ -1,29 +1,31 @@
-#ifndef PLATFORMA_H
-#define PLATFORMA_H
+#ifndef PLATFORM_ARRAY_H
+#define PLATFORM_ARRAY_H
 
-#include "../Vectors/Vector2D.h"
 #include "../Textures/Textures.h"
+#include "../Vectors/Vector2D.h"
 
-class platforma: protected Textures{
+class Platforma : public Textures{
 public:
-    platforma();
-    platforma(Vector2d, Vector2d, uint);
-    platforma(platforma&);
-    ~platforma();
+    Platforma();
+    Platforma(float, float, float);
 
-    platforma &operator=(platforma &);
+    void SetSpeed(float, float, float);
+    void SetObject(Vector2d, Vector2d);
+    void SetTexture(const char*);
+    void SetBorder(float);
 
+    void Move();
+    void Show();
 
-    void SetInfo(Vector2d, Vector2d, uint);
-    void draw();
 protected:
-    uint ID_Texture;
+    float A, Speed, MaxSpeed;
+    Vector2d Coordinate, Size;
 
-    Vector2d coordinate;
+    static uint TextureID;
 
-    const int Size = 4;
-    Vector2d *vec = new Vector2d[Size]{{1, 1}, {-1, 1}, {-1, -1}, {1, -1}};
+    float Border = 0;
 
+    Vector2d *vec = new Vector2d[]{ {1,1}, {-1,1}, {-1,-1}, {1,-1} };
 };
 
 

@@ -11,7 +11,7 @@ Textures::Textures(){}
 
 Textures::Textures(const char* image){
     Textures::TexturesInit(image);
-    printf("Texture Initializate\n   texture name:%s\n   texture id:%d", image, textureID);
+    printf("\nTexture Initializate\n   texture name:%s\n   texture id:%d\n", image, textureID);
 }
 
 uint Textures::TexturesInit(const char* image){
@@ -31,6 +31,8 @@ uint Textures::TexturesInit(const char* image){
     glBindTexture(GL_TEXTURE_2D, 0);
 
     stbi_image_free(data);
+
+    printf("\nTexture Initializate\n   texture name:%s\n   texture id:%d\n", image, textureID);
 
     return textureID;
 }

@@ -10,12 +10,18 @@ private:
     int arr_size = 4;
     Vector2d *VertexArray = new Vector2d[arr_size]{{1, 1}, {-1, 1}, {-1, -1}, {1, -1}};
     int isJump = 0;
-    int CntJump = 220, reCntJump = -CntJump;
-    float PowerJump = 0.00003;
+    int CntJump = 20, reCntJump = -CntJump;
+    float PowerJump = 0.003;
+
+    int isJoystickConnect = 0;
 
 protected:
     Vector2d coord;
     Vector2d size;
+
+    Vector2d Coord_Reset;
+    Vector2d size_Reset;
+
 
 public:
     Dino();

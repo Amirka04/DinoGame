@@ -50,7 +50,7 @@ void Animate::RunAnimation(){
     Init();
 
 //  Будем гонять индекс с начала до конца, что и позволит достичь нам анимации, индекс будет типа float,
-    if( NowIndex < SizeTextureArray - 0.01)
+    if( NowIndex < SizeTextureArray - 0.4)
         NowIndex += SpeedAnimate;
     else
         NowIndex = 0.1;

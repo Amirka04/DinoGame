@@ -42,7 +42,6 @@ Dino::Dino(Animate AnimateDino, Vector2d coord, Vector2d size, float dWind):Anim
     }
 }    
 
-
 // Деструктор для удаления диномического массива
 Dino::~Dino(){
     delete [] VertexArray;
@@ -74,13 +73,16 @@ void Dino::draw(){
 
 
 void Dino::Jump(){
+    if(Joystick::isConnected(0))
+        isJoystickConnect = 1;
+    else
+        isJoystickConnect = 0;
 
     if(isJump && CntJump > reCntJump - 1){
         for(int i = 0; i < arr_size; i++){
             VertexArray[i] += Vector2d(0, PowerJump * CntJump);
         }
         coord += Vector2d(0, PowerJump * CntJump);
-        
         CntJump--;
     }
     else{
@@ -88,7 +90,9 @@ void Dino::Jump(){
         CntJump = -reCntJump;
     }
 
-    if(Keyboard::isKeyPressed(Keyboard::Key::W) && !isJump)
+    bool isButtonPressedJoystick = Joystick::isButtonPressed(0, 0)||Joystick::isButtonPressed(0, 5)||Joystick::isButtonPressed(0, 4)||Joystick::getAxisPosition(0, sf::Joystick::Y) < -30;
+
+    if( ( (isButtonPressedJoystick && isJoystickConnect) || Keyboard::isKeyPressed(Keyboard::Key::W)) && !isJump)
         isJump = 1;
 
 }
